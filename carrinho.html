@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrinho — Stelanes-Empório</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0F1428">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-conteudo">
+    <a href="/" class="marca">
+      <img src="/logo.jpg" alt="Stelanes-Empório" class="marca-logo">
+      Stelanes-Empório
+    </a>
+    <a href="/" class="link-carrinho">Continuar a comprar</a>
+  </div>
+</header>
+
+<main class="pagina-carrinho">
+  <h1>O seu carrinho</h1>
+
+  <div id="lista-carrinho"></div>
+
+  <div class="resumo-total" id="resumo-total" hidden>
+    <span>Total</span>
+    <span class="preco" id="valor-total">0 Kz</span>
+  </div>
+
+  <form class="formulario" id="form-checkout" hidden>
+    <div class="campo">
+      <label for="campo-nome">Nome completo</label>
+      <input id="campo-nome" name="nome" required>
+    </div>
+    <div class="campo">
+      <label for="campo-telefone">Telefone / WhatsApp</label>
+      <input id="campo-telefone" name="telefone" required inputmode="tel">
+    </div>
+    <div class="campo">
+      <label for="campo-endereco">Morada de entrega</label>
+      <input id="campo-endereco" name="endereco">
+    </div>
+    <div class="campo">
+      <label for="campo-notas">Notas (opcional)</label>
+      <textarea id="campo-notas" name="notas"></textarea>
+    </div>
+    <button type="submit" class="botao botao-principal botao-bloco" id="botao-finalizar">Finalizar pedido</button>
+  </form>
+
+  <div class="confirmacao" id="confirmacao" hidden></div>
+</main>
+
+<script src="/app.js"></script>
+<script src="/carrinho.js"></script>
+</body>
+</html>

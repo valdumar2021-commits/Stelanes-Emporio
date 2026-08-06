@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stelanes-Empório</title>
+<meta name="description" content="Acessórios e gadgets tecnológicos, direto para a sua porta.">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0F1428">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-conteudo">
+    <a href="/" class="marca">
+      <img src="/logo.jpg" alt="Stelanes-Empório" class="marca-logo">
+      Stelanes-Empório
+    </a>
+    <a href="/carrinho.html" class="link-carrinho">
+      Carrinho
+      <span class="contagem-carrinho" id="contagem-carrinho">0</span>
+    </a>
+  </div>
+</header>
+
+<section class="hero container">
+  <div>
+    <p class="hero-eyebrow">Loja online</p>
+    <h1>Cada acessório, a sua própria porta de entrada.</h1>
+    <p>Gadgets e acessórios tecnológicos selecionados, com encomenda simples e pagamento por transferência ou MB Way.</p>
+    <div class="hero-acoes">
+      <a href="#catalogo" class="botao botao-principal">Ver produtos</a>
+      <a href="#como-funciona" class="botao botao-secundario">Como funciona</a>
+    </div>
+  </div>
+  <div class="hub-ilustracao">
+    <img src="/capa.jpg" alt="Stelanes-Empório — o seu mundo em um só lugar" class="capa-imagem">
+  </div>
+</section>
+
+<section class="seccao container" id="catalogo">
+  <div class="seccao-titulo">
+    <h2>Catálogo</h2>
+    <span id="contagem-produtos"></span>
+  </div>
+  <div class="grelha-produtos" id="grelha-produtos">
+    <p class="vazio">A carregar produtos…</p>
+  </div>
+</section>
+
+<section class="seccao container" id="como-funciona">
+  <div class="seccao-titulo"><h2>Como funciona</h2></div>
+  <div class="passos">
+    <div class="passo">
+      <div class="passo-porta"></div>
+      <h3>1. Escolha os produtos</h3>
+      <p>Adicione ao carrinho o que precisa e ajuste as quantidades.</p>
+    </div>
+    <div class="passo">
+      <div class="passo-porta"></div>
+      <h3>2. Confirme o pedido</h3>
+      <p>Indique o seu nome, contacto e morada de entrega.</p>
+    </div>
+    <div class="passo">
+      <div class="passo-porta"></div>
+      <h3>3. Pague e receba</h3>
+      <p>Pague por transferência ou MB Way e envie o comprovativo pelo WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="rodape container">
+  <span id="rodape-nome">Stelanes-Empório</span>
+  <a id="rodape-whatsapp" href="#" target="_blank" rel="noopener">Fale connosco no WhatsApp</a>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
