@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administração — Stelanes-Empório</title>
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-conteudo">
+    <a href="/" class="marca">
+      <span class="marca-portas">
+        <span class="marca-porta"></span><span class="marca-porta"></span>
+        <span class="marca-porta"></span><span class="marca-porta"></span>
+      </span>
+      Administração
+    </a>
+    <a href="/" class="link-carrinho">Ver a loja</a>
+  </div>
+</header>
+
+<div class="gate-admin" id="gate-admin">
+  <h1 style="font-family: var(--fonte-display);">Acesso restrito</h1>
+  <p style="color: var(--cor-texto-suave);">Introduza o código de administração para continuar.</p>
+  <form id="form-gate" class="formulario">
+    <div class="campo">
+      <input type="password" id="campo-token" placeholder="Código de administração" required>
+    </div>
+    <button type="submit" class="botao botao-principal botao-bloco">Entrar</button>
+  </form>
+  <p class="mensagem-estado erro" id="erro-gate"></p>
+</div>
+
+<main class="pagina-admin" id="painel-admin" hidden>
+
+  <div class="abas">
+    <button class="aba-botao ativa" data-aba="produtos">Produtos</button>
+    <button class="aba-botao" data-aba="pedidos">Pedidos</button>
+    <button class="aba-botao" data-aba="loja">Dados da loja</button>
+  </div>
+
+  <section id="aba-produtos">
+    <div class="cartao-admin">
+      <h2 style="font-family: var(--fonte-display); margin-top:0;">Novo produto</h2>
+      <form id="form-produto" class="formulario">
+        <div class="linha-form">
+          <div class="campo">
+            <label for="produto-nome">Nome</label>
+            <input id="produto-nome" required>
+          </div>
+          <div class="campo">
+            <label for="produto-preco">Preço (Kz)</label>
+            <input id="produto-preco" type="number" min="0" step="1" required>
+          </div>
+        </div>
+        <div class="linha-form">
+          <div class="campo">
+            <label for="produto-estoque">Estoque</label>
+            <input id="produto-estoque" type="number" min="0" step="1" value="1">
+          </div>
+          <div class="campo">
+            <label for="produto-imagem">URL da imagem (opcional)</label>
+            <input id="produto-imagem" type="url" placeholder="https://…">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="produto-descricao">Descrição</label>
+          <textarea id="produto-descricao"></textarea>
+        </div>
+        <button type="submit" class="botao botao-principal">Adicionar produto</button>
+        <p class="mensagem-estado" id="mensagem-produto"></p>
+      </form>
+    </div>
+
+    <table class="tabela">
+      <thead>
+        <tr><th>Nome</th><th>Preço</th><th>Estoque</th><th></th></tr>
+      </thead>
+      <tbody id="tabela-produtos"></tbody>
+    </table>
+  </section>
+
+  <section id="aba-pedidos" hidden>
+    <table class="tabela">
+      <thead>
+        <tr><th>Pedido</th><th>Cliente</th><th>Itens</th><th>Total</th><th>Estado</th><th></th></tr>
+      </thead>
+      <tbody id="tabela-pedidos"></tbody>
+    </table>
+  </section>
+
+  <section id="aba-loja" hidden>
+    <div class="cartao-admin">
+      <h2 style="font-family: var(--fonte-display); margin-top:0;">Dados da loja</h2>
+      <form id="form-loja" class="formulario">
+        <div class="linha-form">
+          <div class="campo">
+            <label for="loja-nome">Nome da loja</label>
+            <input id="loja-nome" required>
+          </div>
+          <div class="campo">
+            <label for="loja-whatsapp">WhatsApp (código do país + número)</label>
+            <input id="loja-whatsapp" required>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="loja-descricao">Descrição</label>
+          <textarea id="loja-descricao"></textarea>
+        </div>
+        <div class="linha-form">
+          <div class="campo">
+            <label for="loja-iban">IBAN</label>
+            <input id="loja-iban">
+          </div>
+          <div class="campo">
+            <label for="loja-mbway">Número MB Way</label>
+            <input id="loja-mbway">
+          </div>
+        </div>
+        <div class="campo">
+          <label for="loja-instrucoes">Instruções de pagamento</label>
+          <textarea id="loja-instrucoes"></textarea>
+        </div>
+        <button type="submit" class="botao botao-principal">Guardar alterações</button>
+        <p class="mensagem-estado" id="mensagem-loja"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<script src="/app.js"></script>
+<script src="/admin.js"></script>
+</body>
+</html>
