@@ -1,9 +1,11 @@
-const CACHE = 'stelanes-emporio-v1';
+const CACHE = 'stelanes-emporio-v2';
 const FICHEIROS_BASE = [
   '/',
   '/style.css',
   '/app.js',
   '/manifest.json',
+  '/logo.jpg',
+  '/capa.jpg',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
 ];
@@ -33,6 +35,20 @@ self.addEventListener('fetch', (evento) => {
       headers: { 'Content-Type': 'application/json' },
       status: 503,
     })));
+    return;
+  }
+
+  // páginas (HTML): tentar sempre a rede primeiro, para nunca mostrar uma versão desatualizada
+  if (request.mode === 'navigate') {
+    evento.respondWith(
+      fetch(request)
+        .then((respostaRede) => {
+          const clone = respostaRede.clone();
+          caches.open(CACHE).then((cache) => cache.put(request, clone));
+          return respostaRede;
+        })
+        .catch(() => caches.match(request).then((r) => r || caches.match('/')))
+    );
     return;
   }
 
