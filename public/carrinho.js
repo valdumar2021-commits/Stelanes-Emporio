@@ -133,7 +133,7 @@ function mostrarConfirmacao(pedido) {
 
   const resumoItens = pedido.itens.map((i) => `${i.quantidade}× ${i.nome}`).join('%0A');
   const mensagemWhatsapp = encodeURIComponent(
-    `Olá! Acabei de fazer o pedido #${pedido.id} na Stelanes-Empório:\n${pedido.itens.map((i) => `${i.quantidade}× ${i.nome}`).join('\n')}\nTotal: ${formatarKz(pedido.total)}\nVou enviar o comprovativo do pagamento a seguir.`
+    `Olá! Acabei de fazer o pedido #${pedido.id} na ${lojaCache?.nome || 'loja'}:\n${pedido.itens.map((i) => `${i.quantidade}× ${i.nome}`).join('\n')}\nTotal: ${formatarKz(pedido.total)}\nVou enviar o comprovativo do pagamento a seguir.`
   );
   const whatsapp = lojaCache ? `https://wa.me/${lojaCache.whatsapp}?text=${mensagemWhatsapp}` : '#';
 

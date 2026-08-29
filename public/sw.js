@@ -1,4 +1,4 @@
-const CACHE = 'stelanes-emporio-v2';
+const CACHE = 'stelanes-emporio-v3';
 const FICHEIROS_BASE = [
   '/',
   '/style.css',
