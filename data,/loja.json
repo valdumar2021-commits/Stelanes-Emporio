@@ -1,0 +1,18 @@
+{
+  "nome": "Stelanes Comércio, Lda",
+  "descricao": "Eletrónicos, moda, calçado e acessórios selecionados com cuidado, direto para a sua porta.",
+  "whatsapp": "244923638572",
+  "email": "stelanesemporio@gamil.com",
+  "cidade": "Luanda",
+  "pagamento": {
+    "transferencia": {
+      "banco": "Nome do Banco (edite em data/loja.json)",
+      "iban": "AO06 0000 0000 0000 0000 0000 0",
+      "titular": "Nome do titular da conta"
+    },
+    "mbway": {
+      "numero": "244953398371"
+    },
+    "instrucoes": "Após finalizar o pedido, efetue o pagamento por transferência bancária ou MB Way e envie o comprovativo pelo WhatsApp para confirmarmos o seu pedido."
+  }
+}
