@@ -406,6 +406,26 @@ button, input, textarea { font-family: inherit; }
 
 .rodape a { color: var(--cor-accent); text-decoration: none; }
 
+.rodape-identidade {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rodape-nif {
+  font-family: var(--fonte-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.selo-empresa {
+  margin: 4px 0 0;
+  text-align: center;
+  font-family: var(--fonte-mono);
+  font-size: 0.78rem;
+  color: var(--cor-texto-suave);
+}
+
 /* ---------- Carrinho / checkout ---------- */
 
 .pagina-carrinho {
